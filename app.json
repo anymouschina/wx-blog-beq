@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pageDetail/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "文章列表",
+        "iconPath": "image/wodewengao.png",
+        "selectedIconPath":"image/CRM_icon_liebiao.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "关于",
+        "iconPath": "image/wode.png",
+        "selectedIconPath": "image/CRM_icon_wode.png"
+      }
+    ],
+    "selectedColor":"#236B8E"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "beq的程序之路",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

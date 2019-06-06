@@ -1,0 +1,26 @@
+ <import src="../../wxParse/wxParse.wxml"/>
+<view>
+ <view class="head">
+    <view class="title">
+          {{pageDetail.title}}
+    </view>
+    <view class="flex-row-between"> 
+          <view class="label" wx:for="{{pageDetail.type}}" wx:for-item="item" wx:key="item" style="background:{{tittleColor}}">
+          #{{item}}
+          </view>
+    </view>
+ </view>
+  <template is="wxParse" data="{{wxParseData:tpl.nodes}}"/>
+  <view class="footer-fixed flex-between">
+  <view class="input-wrapper">
+         <input  placeholder="说点什么吧...." />
+  </view>
+    <view class='.submit-botton flex-center'>发送</view>
+    <view class='flex-between icon-group'>
+          <view class="flex-column-between icon-box"><view><image style="width: 30rpx; height: 30rpx;margin-right:12rpx;"  src="../../image/wode.png"></image></view><view>点赞</view></view>
+    <view class="flex-column-between icon-box"><view><image style="width: 30rpx; height: 30rpx;margin-right:12rpx;"  src="../../image/wode.png"></image></view><view>转发</view></view>
+    <view class="flex-column-between icon-box"><view><image style="width: 30rpx; height: 30rpx;margin-right:12rpx;"  src="../../image/wode.png"></image></view><view>分享</view></view>
+    </view>
+    
+  </view>
+</view>

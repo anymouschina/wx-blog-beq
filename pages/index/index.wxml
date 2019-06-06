@@ -1,0 +1,47 @@
+<!--index.wxml-->
+
+<view class='topbar'>
+    <view  style="margin-left:{{topbarLeft+'px'}}"></view>
+    <view  wx:for-item="item"  wx:key="title" wx:for="{{topbar}}">
+      <view bindtap="chooseBar" data-index="{{index}}" class="bar-item {{index===selected&&'selected'}}">
+     {{item.title}}
+      </view>   
+    </view>
+    </view>
+     <swiper
+     bindchange = "changeSwiper"
+     style="height:2000rpx;"
+      current='{{current}}'>
+        
+        <block wx:for="{{topbar}}" wx:key="title" style="height:50rpx;">
+          <swiper-item>
+    <view class="container">
+  <!-- <view class="topTabbar">目录||文章</view> -->
+  <view class="container-pt">
+  <!-- <button bindtap="judgePage">SADASDAS</button> -->
+    <view   class="container-wapper" wx:for="{{arrays}}" wx:for-index="index" wx:key="item.index" wx:for-item="item">
+    <view class="container-item-box flex-start" bindtap="judgePage" data-arr="{{item}}">
+      <view class="flex-center img-box">
+        <view class="img-icon"></view>
+      </view>
+      <view class="contariner-item-title flex-column-between">
+              <view>给前端新手的建议</view>
+              <view>
+                <view>
+                </view>
+                <view class="flex-start">
+                  <view class="discrible-item" wx:for-item="ite" wx:for="{{item.discrible}}" wx:key="ite">
+                   <image style="width: 30rpx; height: 30rpx;margin-right:12rpx;"  src="../../image/wode.png"></image>{{ite}}
+                 </view>
+                </view>
+                
+              </view>
+      </view>
+    </view>
+   </view>
+  </view>
+  
+</view>
+   </swiper-item>
+        </block>
+      </swiper>
